@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }} Details</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>Total Stock: {{ product.stock }}</p>
+    <p>HSN Code: {{ product.hsn_code }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Price: {{ product.price }}</p>
+    <a href="{% url 'edit_product' product.id %}">Edit</a> |
+    <a href="{% url 'delete_product' product.id %}">Delete</a>
+    <a href="{% url 'product_list' %}">Back to Product List</a>
+</body>
+</html>
